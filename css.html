@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<h2>CSS</h2>
+<
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="What-is-CSS.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="types-of-css.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="maxresdefault.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+
+    
+        </ul>
+    </header>
+    <hr>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <section class="sidebar">
+            <ul>
+                <li><a href="#cssintro">CSS Introduction</a> </li>
+                <li><a href="#comments">Comments</a> </li>
+                <li><a href="#css-type">Types of CSS</a> </li>
+            </ul>
+        </section>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            
+            <div class="container">
+                <section id="cssintro">
+                    <h2>CSS Introduction</h2>
+                    <p>Cascading Style Sheets (CSS) is a styling language used for styling a web page. It is a language that specifies how web documents (HTML, XML) are presented to users.</p>
+                    <p>CSS can change the color, size, and style of text, backgrounds, and links. It is indispensable for creating interesting layouts and enhancing user experience.</p>
+                    <p>For example, it can be used to create sidebars and ease navigation, among many other things. Hence, CSS is an essential component of web development, alongside HTML and JavaScript</p>
+                     
+                    <h2>CSS Syntax</h2>
+                    <p>The basic syntax of CSS includes 3 main parts:</p>
+                    <ul>
+                        <li><b>Selectors-</b> specifies the HTML element that we want to apply the styles</li>
+                        <li><b>Property-</b>specifies the attribute of HTML elements that we want to change (color, background, and so on)</li>
+                        <li><b>value-</b>specifies the new value you want to assign to the property (color of the text to red, background to gray, and so on)</li>
+                    </ul>
+                    <br>
+                    <h3>Let's take a example of css</h3>
+                    <code>
+                        <pre>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                                    &lt;head&gt;
+                                            &lt;title&gt;css example&lt;/title&gt;
+                                            &lt;style&gt;
+                                                 p{
+                                                    color:blue;
+                                                 }
+                                             &lt;/style&gt;
+                                    &lt;/head&gt;
+                                    &lt;body&gt;
+                                            &lt;p&gt;This is a simple text.&lt;/p&gt;
+                                    &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre>
+                </code>
+                </section>
+                
+                <section id="comments">
+                    <h2>comments in css</h2>
+                    <p>  <pre>" /* this is comment in css */"</pre></p>
+                    <p>is a single line comment. It can be seen while reading the code but gets ignored by the browser during the rendering of the page.</p>
+                    <br>
+                    <p>We can also add a multiline comment on CSS. Simply by ending the comment in a different line.</p>
+                    <br><br>
+                    
+                    <h3>Why we use comments in css?</h3>
+                    <ul type="square">
+                        <li>Comments in code help the person reading the code understand what you were trying to do when you wrote it.</li>
+                       <br>
+                        <li>This makes it easier for other developers to understand the code and make changes if necessary.</li>
+                       <br>
+                        <li>Comments are also useful for anyone who needs to maintain the code in the future.</li>
+                    </ul>
+                    <hr>
+                
+                 </section>
+                 
+                 <section id="css-type">
+                    <h2>Include CSS in a webpage</h2>
+                    <p>CSS is used for styling the look and formatting of a document written in HTML. There are three ways to add CSS in HTML</p>
+                    <ul>
+                        <li><b>Inline CSS:</b>Styles added directly to the HTML element.</li>
+                        <li><b>Internal CSS:</b>Styles defined at the head section of the document.</li>
+                        <li><b>External CSS:</b>tyles defined in a separate file.</li>
+                    </ul>
+                     <br>
+                    <!--inline stye-->
+                    <h3>Inline Style</h3>
+                     <p>Inline style is the approach of adding CSS rules directly to the HTML element using the style attribute</p>
+                     <br>
+                     <code>
+                        <pre>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+                                    &lt;head&gt;
+                                            &lt;title&gt;Browser&lt;/title&gt;
+                                            
+                                    &lt;/head&gt;
+                                    &lt;body&gt;
+                                            &lt;h1&gt;This is h1.&lt;/h1&gt;
+                                            &lt;p&gt;This paragraph doesn't have CSS..&lt;/p&gt;
+                                            &lt;p style="color:red"&gt;This paragraph is styled with inline CSS.&lt;/p&gt;
+                                    &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre>
+                </code>
+                
+                       <h2>Internal CSS</h2>
+                        <p>Internal CSS applies CSS styles to a specific HTML document. Internal CSS is defined inside an HTML document</p>
+                        <br>
+                        <code>
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html lang="en"&gt;
+                                        &lt;head&gt;
+                                        &lt;style&gt;
+                                        p{
+                                           color:blue;
+                                        }
+                                    &lt;/style&gt;
+                                                &lt;title&gt;Browser&lt;/title&gt;
+                                                
+                                        &lt;/head&gt;
+                                        &lt;body&gt;
+                                                &lt;h1&gt;internal css example&lt;/h1&gt;
+                                                &lt;p&gt;This is paragraph1.&lt;/p&gt;
+                                                &lt;p&gt;This is paragraph2.&lt;/p&gt;
+                                                &lt;div&gt;This is content inside a div.&lt;/div&gt;
+                                        &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+                    </code>
+                
+                    <br>
+                    <h2>external-css External CSS</h2>
+                    <p>External CSS is an approach to applying CSS styles to HTML pages by defining the CSS in a separate file.</p>
+                    <br> 
+                    <h3>Example: External CSS</h3>
+                     <ul>
+                        <li>
+                            <h5>style.css</h5>
+                              <pre>p {
+                                color: blue;
+                            }</pre>
+                
+                        </li>
+                        <li>Now, let's connect it with html file</li>
+                     </ul>
+                     <code>
+                        <pre>
+                            
+                            &lt;html lang="en"&gt;
+                                    &lt;head&gt;
+                                             &lt;link href="style.css" rel="stylesheet"&gt;
+                                            &lt;title&gt;Browser&lt;/title&gt;
+                                            
+                                    &lt;/head&gt;
+                                    &lt;body&gt;
+                                            &lt;p&gt;This is a simple text.&lt;/p&gt;
+                                            
+                                    &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre>
+                </code>
+                
+                
+                </section>
+    
+            </div>
+            </div>
+        </div>
+
+        <!--footer-->
+<section id="contact">
+    <div class="footer">
+        <div class="main">
+            <div class="list">
+            
+                <ul>
+                   
+              
+        <p>Copyright 2504 All rights reserved | Made by karan kumar sharma </p>
+    </div>
+
+</section>
+        <script src="scriptA.js"></script>
+
+</body>
+</html>
